@@ -1,9 +1,12 @@
+*{
+	font-family: 'lato';
+}
 body{
 background-image: url(../img/produit/nature.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center; 
-
+ position: relative;
 	height:100vh;
 	width:100vw;
 }
@@ -31,15 +34,39 @@ form{
 	display: block;
 }
 
+#registerDiv{
 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+	
+}
+form{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+.uk-card-default {
+background: rgba(255, 255, 255, 0.24);
+color: #666;
+box-shadow: 20px 15px 15px rgba(0, 0, 0, 0.35);
+}
+.uk-h4, h4 {
+font-size: 1.25rem;
+line-height: 1.4;
+text-align: center;
+color: white;
+}
 .typewriter h3 {
   color: white;
-  font-family: monospace;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid #514d4f; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
+  letter-spacing: .10em; /* Adjust as needed */
   animation: 
     typing 3.5s steps(30, end),
     blink-caret .5s step-end infinite;
@@ -89,3 +116,14 @@ form{
     background-color: #07fdc196;
     color: #fff;
 }
+
+.uk-button-large {
+    background-color: #ffffff69;
+    color: 07fdc196;
+    border: 1px solid transparent;
+}
+.uk-button-large:hover {
+    background-color: #07fdc196;
+    color: #fff;
+}
+
