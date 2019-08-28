@@ -1,11 +1,20 @@
+*{
+	font-family: 'lato';
+}
 body{
 background-image: url(../img/produit/nature.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center; 
-
+}
+#wrapper{
+	
+	display:flex;
+	justify-content:center;
+	align-items:center;
 	height:100vh;
-	width:100vw;
+
+	
 }
 ul{
 	list-style: none;
@@ -20,26 +29,59 @@ li{
 	display: flex;
 	width: 100%;
 }
-nav{
+nav#navbar{
 	display:flex;
+	position:absolute;
+	top:0px;
+	width:100%;
+	
 }
 #Loginbar{
 	postion: absolute;
 	right: 10px;
 }
-form{
-	display: block;
+
+#registerForm{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+#registerDiv{
+
+
+
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
 }
 
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
 
+.uk-card-default {
+background: rgba(255, 255, 255, 0.24);
+color: #666;
+box-shadow: 20px 15px 15px rgba(0, 0, 0, 0.35);
+}
+
+.uk-h4, h4 {
+font-size: 1.25rem;
+line-height: 1.4;
+text-align: center;
+color: white;
+}
 .typewriter h3 {
   color: white;
-  font-family: monospace;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid #514d4f; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
+  letter-spacing: .10em; /* Adjust as needed */
   animation: 
     typing 3.5s steps(30, end),
     blink-caret .5s step-end infinite;
@@ -88,4 +130,52 @@ form{
 .uk-button-primary:hover {
     background-color: #07fdc196;
     color: #fff;
+}
+
+.uk-button-large {
+    background-color: #ffffff69;
+    color: black;
+    border: 1px solid transparent;
+}
+.uk-button-large:hover {
+    background-color: #07fdc196;
+    color: #fff;
+}
+
+
+.container {
+  position: relative;
+  overflow:hidden;
+
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+#price{
+	float:left;
+	margin-top:5%;
+	display:inline;
+	width:130px;
+}
+
+#formAddCart{
+	float:right;
+	margin-top:5%;
+	display:inline;
 }
