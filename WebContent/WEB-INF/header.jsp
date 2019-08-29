@@ -6,6 +6,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, user-scalable=no" /> 
+<meta charset="UTF-8">
 <title>CLEAN 4 ALL</title>
 <!-- UIkit CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.7/css/uikit.min.css" />
@@ -16,15 +17,13 @@
 <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="ressources/css/main.css">
 </head>
-
 <body>
 
-<nav id="navbar" class="uk-navbar-container" uk-navbar>
+<nav id="navbar" class="uk-navbar-container" uk-navbar> 
     <div class="uk-navbar-left">
 	    <ul id="Menu">
 	    	<li><a href="home"><button class="uk-button uk-button-primary">Home</button></a></li>
 			<li><a href="produit"><button class="uk-button uk-button-primary">Produit</button></a></li>
-
 		</ul>
     </div>
 	<div class="uk-navbar-center">

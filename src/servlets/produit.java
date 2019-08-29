@@ -29,6 +29,7 @@ public class produit extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		
+<<<<<<< HEAD
 		
 		
 		
@@ -65,6 +66,86 @@ public class produit extends HttpServlet {
 
 	}
 
+=======
+<<<<<<< HEAD
+		Produit produit = null;
+
+		try {
+
+			Connection con = DBConnect.connect();
+
+			PreparedStatement stmt = con.prepareStatement(
+					"SELECT nomProduit, prixProduit, imgProduit "
+					+ "FROM produit "
+					+ "WHERE id = 1 "
+			);
+
+			ResultSet rs = stmt.executeQuery();
+			
+				
+			if(rs.next()) {
+				
+				produit = new Produit(rs.getString("nomProduit"), rs.getInt("prixProduit"));
+			}
+			
+			
+			con.close();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+
+			response.sendRedirect("produit");
+		
+		
+		
+		
+		
+		
+		this.getServletContext().getRequestDispatcher("/WEB-INF/views/produit.jsp").forward(request, response);
+	}
+
+=======
+		
+		
+		
+		Produit produit = null;
+
+		try {
+
+			Connection con = DBConnect.connect();
+
+			PreparedStatement stmt = con.prepareStatement(
+					"SELECT nomProduit, prixProduit, imgProduit, descProduit "
+					+ "FROM produit "
+					+ "WHERE id = 1 "
+			);
+
+			ResultSet rs = stmt.executeQuery();
+			
+				
+			if(rs.next()) {
+				
+				produit = new Produit(rs.getString("nomProduit"), rs.getInt("prixProduit"), rs.getString("imgProduit"),rs.getString("descProduit"));
+				request.setAttribute("produit", produit);
+			}
+			
+			
+			con.close();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		this.getServletContext().getRequestDispatcher("/WEB-INF/views/produit.jsp").forward(request, response);
+
+	}
+
+>>>>>>> AZERTY
+>>>>>>> 028bfcf92f624a2fe0e3c1568e0098cfc89ecb47
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
