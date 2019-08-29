@@ -29,6 +29,7 @@ public class produit extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		
+<<<<<<< HEAD
 		Produit produit = null;
 
 		try {
@@ -68,6 +69,44 @@ public class produit extends HttpServlet {
 		this.getServletContext().getRequestDispatcher("/WEB-INF/views/produit.jsp").forward(request, response);
 	}
 
+=======
+		
+		
+		
+		Produit produit = null;
+
+		try {
+
+			Connection con = DBConnect.connect();
+
+			PreparedStatement stmt = con.prepareStatement(
+					"SELECT nomProduit, prixProduit, imgProduit, descProduit "
+					+ "FROM produit "
+					+ "WHERE id = 1 "
+			);
+
+			ResultSet rs = stmt.executeQuery();
+			
+				
+			if(rs.next()) {
+				
+				produit = new Produit(rs.getString("nomProduit"), rs.getInt("prixProduit"), rs.getString("imgProduit"),rs.getString("descProduit"));
+				request.setAttribute("produit", produit);
+			}
+			
+			
+			con.close();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		this.getServletContext().getRequestDispatcher("/WEB-INF/views/produit.jsp").forward(request, response);
+
+	}
+
+>>>>>>> AZERTY
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */

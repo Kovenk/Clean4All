@@ -6,9 +6,19 @@ background-image: url(../img/produit/nature.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center; 
+<<<<<<< HEAD
  position: relative;
+=======
+}
+#wrapper{
+	
+	display:flex;
+	justify-content:center;
+	align-items:center;
+>>>>>>> AZERTY
 	height:100vh;
-	width:100vw;
+
+	
 }
 ul{
 	list-style: none;
@@ -23,19 +33,30 @@ li{
 	display: flex;
 	width: 100%;
 }
-nav{
+nav#navbar{
 	display:flex;
+	position:absolute;
+	top:0px;
+	width:100%;
+	
 }
 #Loginbar{
 	postion: absolute;
 	right: 10px;
 }
-form{
-	display: block;
+
+#registerForm{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
 }
+#registerDiv{
+
 
 #registerDiv{
 
+<<<<<<< HEAD
   position: absolute;
   top: 50%;
   left: 50%;
@@ -49,11 +70,29 @@ form{
   justify-content: center;
   align-items: center;
 }
+=======
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+>>>>>>> AZERTY
 .uk-card-default {
 background: rgba(255, 255, 255, 0.24);
 color: #666;
 box-shadow: 20px 15px 15px rgba(0, 0, 0, 0.35);
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> AZERTY
 .uk-h4, h4 {
 font-size: 1.25rem;
 line-height: 1.4;
@@ -119,7 +158,11 @@ color: white;
 
 .uk-button-large {
     background-color: #ffffff69;
+<<<<<<< HEAD
     color: 07fdc196;
+=======
+    color: black;
+>>>>>>> AZERTY
     border: 1px solid transparent;
 }
 .uk-button-large:hover {
@@ -127,3 +170,43 @@ color: white;
     color: #fff;
 }
 
+<<<<<<< HEAD
+=======
+
+.container {
+  position: relative;
+  overflow:hidden;
+
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+#price{
+	float:left;
+	margin-top:5%;
+	display:inline;
+	width:130px;
+}
+
+#formAddCart{
+	float:right;
+	margin-top:5%;
+	display:inline;
+}
+>>>>>>> AZERTY

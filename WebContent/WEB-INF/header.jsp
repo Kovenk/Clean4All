@@ -1,11 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>CLEAN 4 ALL</title>
 <!-- UIkit CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.7/css/uikit.min.css" />
@@ -18,16 +18,15 @@
 </head>
 <body>
 
-
-
-
-
-
-<nav class="uk-navbar-container" uk-navbar>
+<nav id="navbar" class="uk-navbar-container" uk-navbar>
     <div class="uk-navbar-left">
 	    <ul id="Menu">
 	    	<li><a href="home"><button class="uk-button uk-button-primary">Home</button></a></li>
+<<<<<<< HEAD
 			<li><button class="uk-button uk-button-primary">Contacts</button></li>
+=======
+			<li><a href="produit"><button class="uk-button uk-button-primary">Produit</button></a></li>
+>>>>>>> AZERTY
 
 		</ul>
     </div>
@@ -37,7 +36,11 @@
 				<h3>Bienvenue ${fn:toUpperCase(sessionScope.user.username) } !</h3>
 			</c:if>
 			<c:if test="${ empty sessionScope.user}">
+<<<<<<< HEAD
 				<h3>Bienvenue invité(e)!</h3>
+=======
+				<h3>Bienvenue invitÃ©(e)!</h3>
+>>>>>>> AZERTY
 			</c:if>
 		</div>    
 	</div>
@@ -59,10 +62,9 @@
 
 	</div>
 </nav>
+<div id="wrapper">
 
 
-
-	
 
 
 
