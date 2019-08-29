@@ -8,8 +8,8 @@
 				<div class="overlay">${produit.descProduit }</div>
 			</div>
 			<button id="price" class="uk-button uk-button-default uk-button-large">PRIX : ${ produit.prixProduit } &euro;</button>
-			<form id="formAddCart" method="post" action="addCart">
-			<input class="uk-input uk-form-width-small" type="text" placeholder="Qte">
+			<form id="formAddCart" method="post" action="addProduit">
+			<input class="uk-input uk-form-width-small" type="text" placeholder="Qte">	
 			<input id="addCart" class="uk-button uk-button-default uk-button-large" type="submit" value="Ajouter au panier">
 			
 			</form>

@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no" /> 
 <title>CLEAN 4 ALL</title>
 <!-- UIkit CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.7/css/uikit.min.css" />
@@ -16,6 +16,7 @@
 <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="ressources/css/main.css">
 </head>
+
 <body>
 
 <nav id="navbar" class="uk-navbar-container" uk-navbar>
@@ -47,7 +48,13 @@
 	
 	<c:if test="${ !empty sessionScope.user}">
 		<ul id="Logbar">
+		
+			<c:if test="${shoppingCart.shoppingCart.size() >0}">
+			<li><a href="panier"><button class="uk-button uk-button-primary">Mon Panier(${ShoppingCart.ShoppingCart.size()})</button></a></li>
+			</c:if>
+			<c:if test="${shoppingCart.shoppingCart.size() =0}">
 			<li><a href="panier"><button class="uk-button uk-button-primary">Mon Panier</button></a></li>
+			</c:if>
 			<li><a href="logout"><button class="uk-button uk-button-primary">Deconnexion</button></a></li>
 		</ul>
 	</c:if>
