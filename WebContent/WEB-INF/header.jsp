@@ -48,13 +48,7 @@
 	
 	<c:if test="${ !empty sessionScope.user}">
 		<ul id="Logbar">
-		
-			<c:if test="${shoppingCart.shoppingCart.size() >0}">
-			<li><a href="panier"><button class="uk-button uk-button-primary">Mon Panier(${ShoppingCart.ShoppingCart.size()})</button></a></li>
-			</c:if>
-			<c:if test="${shoppingCart.shoppingCart.size() =0}">
 			<li><a href="panier"><button class="uk-button uk-button-primary">Mon Panier</button></a></li>
-			</c:if>
 			<li><a href="logout"><button class="uk-button uk-button-primary">Deconnexion</button></a></li>
 		</ul>
 	</c:if>
