@@ -1,38 +1,21 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 028bfcf92f624a2fe0e3c1568e0098cfc89ecb47
 *{
 	font-family: 'lato';
 }
 body{
-<<<<<<< HEAD
+
 	background-image: url(../img/produit/nature.jpg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center; 
-=======
-background-image: url(../img/produit/nature.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center; 
-<<<<<<< HEAD
- position: relative;
-=======
->>>>>>> 028bfcf92f624a2fe0e3c1568e0098cfc89ecb47
+
+
 }
 #wrapper{
 	
 	display:flex;
 	justify-content:center;
 	align-items:center;
-<<<<<<< HEAD
-=======
->>>>>>> AZERTY
->>>>>>> 028bfcf92f624a2fe0e3c1568e0098cfc89ecb47
 	height:100vh;
-
-	
 }
 ul{
 	list-style: none;
@@ -64,15 +47,13 @@ nav#navbar{
   flex-direction:column;
   justify-content: center;
   align-items: center;
-<<<<<<< HEAD
-=======
+
 }
-#registerDiv{
+#registerDiv{}
 
 
 #registerDiv{
 
-<<<<<<< HEAD
   position: absolute;
   top: 50%;
   left: 50%;
@@ -86,22 +67,14 @@ form{
   justify-content: center;
   align-items: center;
 }
-=======
-    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s; /* Firefox < 16 */
-        -ms-animation: fadein 2s; /* Internet Explorer */
-         -o-animation: fadein 2s; /* Opera < 12.1 */
-            animation: fadein 2s;
->>>>>>> 028bfcf92f624a2fe0e3c1568e0098cfc89ecb47
-}
-#registerDiv{
+
+
+#registerDiv{}
 
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
-}
 
-<<<<<<< HEAD
 
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -110,27 +83,14 @@ form{
             animation: fadein 2s;
 }
 
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
 
-=======
->>>>>>> AZERTY
->>>>>>> 028bfcf92f624a2fe0e3c1568e0098cfc89ecb47
+
 .uk-card-default {
 background: rgba(255, 255, 255, 0.24);
 color: #666;
 box-shadow: 20px 15px 15px rgba(0, 0, 0, 0.35);
 }
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> AZERTY
->>>>>>> 028bfcf92f624a2fe0e3c1568e0098cfc89ecb47
 .uk-h4, h4 {
 font-size: 1.25rem;
 line-height: 1.4;
@@ -196,27 +156,13 @@ color: white;
 
 .uk-button-large {
     background-color: #ffffff69;
-<<<<<<< HEAD
     color: black;
-=======
-<<<<<<< HEAD
-    color: 07fdc196;
-=======
-    color: black;
->>>>>>> AZERTY
->>>>>>> 028bfcf92f624a2fe0e3c1568e0098cfc89ecb47
     border: 1px solid transparent;
 }
 .uk-button-large:hover {
     background-color: #07fdc196;
     color: #fff;
 }
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 028bfcf92f624a2fe0e3c1568e0098cfc89ecb47
 
 .container {
   position: relative;
@@ -254,7 +200,3 @@ color: white;
 	margin-top:5%;
 	display:inline;
 }
-<<<<<<< HEAD
-=======
->>>>>>> AZERTY
->>>>>>> 028bfcf92f624a2fe0e3c1568e0098cfc89ecb47
