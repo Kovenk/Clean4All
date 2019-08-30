@@ -47,7 +47,11 @@
 	
 	<c:if test="${ !empty sessionScope.user}">
 		<ul id="Logbar">
-			<li><a href="panier"><button class="uk-button uk-button-primary">Mon Panier</button></a></li>
+			<li><a href="Panier"><button class="uk-button uk-button-primary">Mon Panier
+			<c:if test="${ sessionScope.cart.totalQtt() > 0 }">
+			(${ sessionScope.cart.totalQtt() })</c:if>
+			</button></a></li>
+			
 			<li><a href="logout"><button class="uk-button uk-button-primary">Deconnexion</button></a></li>
 		</ul>
 	</c:if>

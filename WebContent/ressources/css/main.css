@@ -49,18 +49,8 @@ nav#navbar{
   align-items: center;
 
 }
-#registerDiv{}
 
 
-#registerDiv{
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-	
-}
 form{
   display: flex;
   flex-direction:column;
@@ -69,11 +59,8 @@ form{
 }
 
 
-#registerDiv{}
+#registerDiv{
 
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
 
 
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
@@ -83,7 +70,10 @@ form{
             animation: fadein 2s;
 }
 
-
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
 
 .uk-card-default {
 background: rgba(255, 255, 255, 0.24);
@@ -105,7 +95,7 @@ color: white;
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .10em; /* Adjust as needed */
   animation: 
-    typing 3.5s steps(30, end),
+    typing 1s steps(30, end),
     blink-caret .5s step-end infinite;
 
     
@@ -200,3 +190,8 @@ color: white;
 	margin-top:5%;
 	display:inline;
 }
+
+
+
+
+

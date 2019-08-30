@@ -36,7 +36,7 @@ public class produit extends HttpServlet {
 			Connection con = DBConnect.connect();
 
 			PreparedStatement stmt = con.prepareStatement(
-					"SELECT nomProduit, prixProduit, imgProduit, descProduit "
+					"SELECT id, nomProduit, prixProduit, imgProduit, descProduit "
 					+ "FROM produit "
 					+ "WHERE id = 1 "
 			);
@@ -46,7 +46,13 @@ public class produit extends HttpServlet {
 				
 			if(rs.next()) {
 				
-				produit = new Produit(rs.getString("nomProduit"), rs.getInt("prixProduit"), rs.getString("imgProduit"),rs.getString("descProduit"));
+				produit = new Produit(
+						rs.getInt("id"),
+						rs.getString("nomProduit"), 
+						rs.getInt("prixProduit"), 
+						rs.getString("imgProduit"),
+						rs.getString("descProduit")
+				);
 				request.setAttribute("produit", produit);
 			}
 			

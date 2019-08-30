@@ -8,42 +8,39 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import beans.Cart;
+
 /**
  * Servlet implementation class AddCart
  */
-@WebServlet("/AddCart")
+@WebServlet("/addCart")
 public class AddCart extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public AddCart() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+		int idProduit = Integer.parseInt(request.getParameter("idProduit"));
+		int qttProduit = Integer.parseInt(request.getParameter("qttProduit"));
 		
-		HttpSession session = request.getSession();
+		Cart cart = null;
 		
-		String nomProduit = request.getParameter("nomProduit");
-		String imgProduit = request.getParameter("imgProduit");
-		String qteProduit = request.getParameter("qteProduit");
+		if(request.getSession().getAttribute("cart") != null) {
+			
+			cart = (Cart) request.getSession().getAttribute("cart");
+		}
+		else {
+			cart = new Cart();
+		}
 		
-		doGet(request, response);
+		cart.addCart(idProduit, qttProduit);
+		
+		request.getSession().setAttribute("cart", cart);
+		
+		response.sendRedirect("produit");
+		
 	}
 
 }
